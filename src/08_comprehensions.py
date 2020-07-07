@@ -1,4 +1,19 @@
+
 """
+List Comprehensions
+"""
+
+odds = [1, 3, 5, 7, 9]
+#like map
+print([x+1 for x in odds])
+
+#like filter
+print([x for x in odds if 25 % x == 0])
+
+# general form
+# [<map expression> for <name> in <sequence espression> if <filter expression>]
+
+
 List comprehensions are one cool and unique feature of Python.
 They essentially act as a terse and concise way of initializing
 and populating a list given some expression that specifies how

@@ -1,3 +1,5 @@
+# coding: utf-8
+
 """
 The Python standard library's 'calendar' module allows you to
 render a calendar to your terminal.
@@ -27,6 +29,35 @@ print out a calendar for April in 2015, but if you omit either the year or both 
 it should use today’s date to get the month and year.
 """
 
+
 import sys
 import calendar
 from datetime import datetime
+# import datetime
+
+# works
+# test = input("Enter the date: ").split(",")
+# print(test)
+
+# works
+# print(calendar.weekday(2020, 7, 7))
+
+# works
+# tc = calendar.TextCalendar(firstweekday=6)
+# print(tc.formatmonth(2020, 7))
+
+userinputdate = input("Enter the date: ").split(",")
+
+# def calendarfunction():
+#     if len(userinputdate) == 0:
+#         tc = calendar.TextCalendar(firstweekday=6)
+#         testmonth = datetime.datetime.now()
+#         print(tc.formatmonth(testmonth.year, testmonth.month))
+#     else:
+#       return None
+
+# calendarfunction()
+
+ tc = calendar.TextCalendar(firstweekday=6)
+    testmonth = datetime.datetime.now()
+    print(tc.formatmonth(testmonth.year, testmonth.month))

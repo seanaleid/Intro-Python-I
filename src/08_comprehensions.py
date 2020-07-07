@@ -13,7 +13,7 @@ print([x for x in odds if 25 % x == 0])
 # general form
 # [<map expression> for <name> in <sequence espression> if <filter expression>]
 
-
+"""
 List comprehensions are one cool and unique feature of Python.
 They essentially act as a terse and concise way of initializing
 and populating a list given some expression that specifies how
@@ -24,6 +24,7 @@ for more info regarding list comprehensions.
 """
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
+
 
 y = []
 for x in range(5):
@@ -56,3 +57,4 @@ x = input("Enter comma-separated numbers: ").split(',')
 # What do you need between the square brackets to make it work?
 y = [i for i in x if int(i)%2 == 0]
 # print(y)
+

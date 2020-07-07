@@ -61,8 +61,12 @@ def f3(num1, num2=1):
 
 # YOUR CODE HERE
 def f4(**vals):
-    print("key: a, value: " + str(vals["a"]))
-    print("key: b, value: " + str(vals["b"]))
+    # print("key: a, value: " + str(vals["a"]))
+    # print("key: b, value: " + str(vals["b"]))
+    ### loop through and print each value 
+    ### review the .items() --> dictionaries .items(), .keys(), 1 more
+    for args, items in vals.items():
+        print(args, items)
 
 
 # Should print
@@ -70,10 +74,11 @@ def f4(**vals):
 # key: b, value: 30
 # f4(a=12, b=30)
 
-def f4(**vals):
-    print("key: city, value: " + vals["city"])
-    print("key: population, value: " +str(vals["population"]))
-    print("key: founded, value: " +vals["founded"])
+### not need, f4 on 63 - 69 works for both 
+# def f4(**vals):
+#     print("key: city, value: " + vals["city"])
+#     print("key: population, value: " +str(vals["population"]))
+#     print("key: founded, value: " +vals["founded"])
 
 # Should print
 # key: city, value: Berkeley

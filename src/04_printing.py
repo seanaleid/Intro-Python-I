@@ -13,7 +13,8 @@ z = "I like turtles!"
 # Using the printf operator (%), print the following feeding in the values of x,
 # y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
-# print("x is %f" %(x), "y is %f" %(y), "z is %s" %(z))
+print("x is %f" %(x), "y is %f" %(y), "z is %s" %(z) %(x, y, z))
+### second option above 
 
 # Is the y one correct? 
 

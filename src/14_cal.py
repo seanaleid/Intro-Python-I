@@ -1,4 +1,4 @@
-# coding: utf-8
+
 
 """
 The Python standard library's 'calendar' module allows you to
@@ -28,12 +28,37 @@ This would mean that from the command line you would call `python3 14_cal.py 4 2
 print out a calendar for April in 2015, but if you omit either the year or both values, 
 it should use today’s date to get the month and year.
 """
-
-
 import sys
 import calendar
 from datetime import datetime
-# import datetime
+
+def calendarFunction():
+    # grab today's information for when nothing is input by the user
+    # today = datetime.now()
+    # year = datetime.now().year
+    # month = datetime.now().month
+    # print("This is the month", str(month))
+
+    today = datetime.today()
+    year = today.year
+    month = today.month
+    # print("This is the month", str(month))
+
+    #make inputs
+    inputMonth = input("Please type a month, ex: 8 (only numbers and no spaces)! :")
+    inputYear = input("Please type a year, ex: 1995 (only numbers and no spaces)! :")
+    # print(inputMonth, inputYear)
+
+    # write conditionals to print calendar
+    if len(inputMonth) > 0 and len(inputMonth) <= 2 and inputMonth.isdigit():
+        month = int(inputMonth)
+
+    if len(inputYear) > 0 and len(inputYear) <= 4 and inputYear.isdigit():
+        year = int(inputYear)
+
+    print(calendar.month(year, month))
+
+calendarFunction()
 
 # works
 # test = input("Enter the date: ").split(",")
@@ -46,7 +71,7 @@ from datetime import datetime
 # tc = calendar.TextCalendar(firstweekday=6)
 # print(tc.formatmonth(2020, 7))
 
-userinputdate = input("Enter the date: ").split(",")
+# userinputdate = input("Enter the date: ").split(",")
 
 # def calendarfunction():
 #     if len(userinputdate) == 0:
@@ -58,6 +83,9 @@ userinputdate = input("Enter the date: ").split(",")
 
 # calendarfunction()
 
- tc = calendar.TextCalendar(firstweekday=6)
-    testmonth = datetime.datetime.now()
-    print(tc.formatmonth(testmonth.year, testmonth.month))
+# tc = calendar.TextCalendar(firstweekday=6)
+# testmonth = datetime.datetime.now()
+# print(tc.formatmonth(testmonth.year, testmonth.month))
+
+# cal = calendar.Calendar()
+# print(cal.monthdatescalendar(2020, 7))
